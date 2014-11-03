@@ -270,9 +270,9 @@
 				$.each(json.results, function(idx, obj) {
 					var tmpItem = ruleItem.clone(),hit=0;
 					tmpItem.attr("data-objId",obj.objectId).find(".title").text(obj.title)
-					.end().find(".des").text(obj.description);
+					.end().find(".des").html(obj.description);
 					obj.remark?
-						tmpItem.find("blockquote.remark").text(obj.remark):
+						tmpItem.find("blockquote.remark").html(obj.remark):
 						tmpItem.find("blockquote.remark").remove();
 					obj.example.unrecom?
 						tmpItem.find(".warning").text(obj.example.unrecom):
