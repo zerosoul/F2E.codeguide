@@ -38,7 +38,7 @@
 				<div class="2u">
 					<div class="select-wrapper">
 						<select id="category">
-							<option value="">- 选择类别 -</option>
+							<option value="">- 选择类别[必选] -</option>
 						</select>
 					</div>
 				</div>
@@ -64,9 +64,19 @@
 					<a id="addCategory" href="#" class="button special small">确定</a>
 				</div>
 			</div>
+			<div class="row uniform">
+				<div class="1.5u">
+					<input type="radio" id="code-style" name="rule-type" checked value="1">
+					<label for="code-style">编程风格</label>
+				</div>
+				<div class="1.5u">
+					<input type="radio" id="code-practice" name="rule-type" value="2">
+					<label for="code-practice">编程实践</label>
+				</div>
+			</div>
 			<div class="row uniform collapse-at-2">
 				<div class="6u">
-					<input type="text" class="canReset" id="title" placeholder="标题">
+					<input type="text" class="canReset" id="title" placeholder="标题[必填]">
 				</div>
 
 			</div>
@@ -74,25 +84,25 @@
 
 			<div class="row uniform">
 				<div class="12u">
-					<textarea id="description" class="canReset" placeholder="描述...[可使用HTML标签]" rows="6"></textarea>
+					<textarea id="description" class="canReset" placeholder="描述...[可使用HTML标签][必填]" rows="6"></textarea>
 				</div>
 			</div>
 			<div class="row uniform">
 				<div class="12u">
-					<textarea id="remark" class="canReset" placeholder="备注...[可使用HTML标签]" rows="6"></textarea>
+					<textarea id="remark" class="canReset" placeholder="备注...[可使用HTML标签][选填]" rows="6"></textarea>
 				</div>
 			</div>
 			<div class="row uniform">
 				<div class="6u">
-					<textarea class="warning canReset" id="example-unrecom" placeholder="不推荐写法..." rows="6"></textarea>
+					<textarea class="warning canReset" id="example-unrecom" placeholder="不推荐写法...[选填]" rows="6"></textarea>
 				</div>
 				<div class="6u">
-					<textarea class="recommend canReset" id="example-recom" placeholder="推荐写法..." rows="6"></textarea>
+					<textarea class="recommend canReset" id="example-recom" placeholder="推荐写法...[选填]" rows="6"></textarea>
 				</div>
 
 			</div>
 			<div class="row uniform">
-				<div class="2u">
+				<div class="4u">
 					<ul class="actions 12u">
 						<li>
 							<a class="button special" id="commit" href="#">确定</a>
@@ -100,18 +110,15 @@
 						<li>
 							<a class="button" id="reset" href="#">重置</a>
 						</li>
+						<li id="tipIcon" class="icon fa-spinner fa-spin tip" style="display: none;"></li>
 					</ul>
-				</div>
-				<div class="1u" id="sendResultTip">
-					<div class="addResultTip added">添加成功</div>
-					<div class="addResultTip failed">添加失败</div>
 				</div>
 			</div>
 		</div>
 		<!-- Footer -->
 		<footer id="footer">
 			<div class="copyright">
-				Created by<a href="http://zerosoul.github.io/impress-resume/" target="_blank">Tristan</a>. Powered by<a href="http://getskel.com/" target="_blank">Skel.js</a>
+				Created by <a href="http://zerosoul.github.io/impress-resume/" target="_blank">Tristan</a>. Powered by <a href="http://getskel.com/" target="_blank">Skel.js</a>
 			</div>
 		</footer>
 

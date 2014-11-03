@@ -1020,11 +1020,8 @@ section.remark{
 	border-radius: 15px;
 	color: #FFF;
 	}
-.added{
-	background-color: #a3cf62;
-}
-.failed{
-	background-color: #f69c9f;
+.tip{
+	color: #49BF9D;
 }
 /*.forExample{
 	margin-bottom: 1.5em;

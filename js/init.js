@@ -166,11 +166,14 @@
 			$("#commit").click(function(evt) {
 				evt = evt || window.event;
 				evt.preventDefault();
+				$(this).attr("disabled","");
+				$("#tipIcon").attr("class","icon fa-spin fa-spinner tip").show();
 				postRuleInputs();
 			});
 
 			function postRuleInputs() {
 				var cate = Number($("#category").find("option:selected").val()),
+					type=Number($("input[name=rule-type]:checked").val()),
 					title = $("#title").val(),
 					des = $("#description").val(),
 					remark = $("#remark").val(),
@@ -178,7 +181,7 @@
 					recom = $("#example-recom").val();
 				var ruleItem = {
 					cate: cate,
-					type:1,
+					type:type,
 					title: title,
 					description: des,
 					remark: remark,
@@ -191,14 +194,11 @@
 				$.parse.post("Codestyle", ruleItem, function(json) {
 					console.log(json);
 					if (json.objectId) {
-						$("#sendResultTip div").hide().filter(function() {
-							return $(this).hasClass("added");
-						}).fadeIn();
+						$("#tipIcon").removeClass("fa-spinner fa-spin").addClass("fa-check");
 					} else {
-						$("#sendResultTip div").hide().filter(function() {
-							return $(this).hasClass("failed");
-						}).fadeIn();
+						$("#tipIcon").removeClass("fa-spinner fa-spin").addClass("fa-warning");
 					}
+					$("#commit").removeAttr("disabled");
 				});
 			};
 		} else {
@@ -268,12 +268,21 @@
 					htmlcssArray=[],
 					jsArray=[];
 				$.each(json.results, function(idx, obj) {
-					var tmpItem = ruleItem.clone();
+					var tmpItem = ruleItem.clone(),hit=0;
 					tmpItem.attr("data-objId",obj.objectId).find(".title").text(obj.title)
-					.end().find(".des").text(obj.description)
-					.end().find("blockquote.remark").text(obj.remark)
-					.end().find(".warning").text(obj.example.unrecom)
-					.end().find(".recommend").text(obj.example.recom);
+					.end().find(".des").text(obj.description);
+					obj.remark?
+						tmpItem.find("blockquote.remark").text(obj.remark):
+						tmpItem.find("blockquote.remark").remove();
+					obj.example.unrecom?
+						tmpItem.find(".warning").text(obj.example.unrecom):
+						tmpItem.find(".warning").parents("section").remove();
+					obj.example.recom?
+						tmpItem.find(".recommend").text(obj.example.recom):
+						tmpItem.find(".recommend").parents("section").remove();
+					tmpItem.find(".defaultHidden section").length>0?
+						"":
+						tmpItem.find(".forExample").remove();
 					switch(obj.cate){
 						case 1:
 						//common
