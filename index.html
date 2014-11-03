@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<title>前端编码规范</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="前端编码规范" />
+		<meta name="keywords" content="前端编码规范" />
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/jquery.parse.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+		</noscript>
+	</head>
+	<body id="top" class="index">
+		<!-- Header -->
+		<header id="header" class="skel-layers-fixed">
+			<h1><a href="#">F2E Code Style Guide</a></h1>
+			<nav id="nav">
+				<ul><li><a class="button special fa-group icon" data-jumpto="common" href="#common">通用</a></li>
+					<li><a class="button special fa-code icon" data-jumpto="htmlcss" href="#htmlcss">HTML/CSS</a></li>
+					<li><a class="button special fa-code-fork icon" data-jumpto="js" href="#js">Javascript</a></li>
+					</li>
+					<li><a class="button small icon fa-building-o" href="addRule.html">添砖加瓦</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<!-- Banner -->
+		<section id="banner">
+			<h2>前端编码规范</h2>
+			<img src="images/follow.jpg" />
+			<p></p>
+			<p>程序是写给人读的，只是偶尔让计算机执行一下。(Donald Knuth)</p>
+		</section>
+		<!-- Main -->
+		<div id="main" class="container">
+			<div class="container" id="common">
+				<hr class="major"/>
+				<div class="row">
+					<h2 class="rightAway">共识：二级标题</h2><a class="button small fa-angle-double-down icon expandAll" href="#">展开全部举例</a>
+				</div>
+				<!-- common -->
+				<div class="container box">
+				<div class="row double">
+					<section class="6u">
+						<h3>三级标题</h3>
+						<p>备注一下备注一下备注一下备注一下备注一下备注一下备注一下备注一下备注一下备注一下备注一下备注一下备注一下备注一下备注一下备注一下备注一下备注一下备注一下备注一下备注一下备注一下备注一下备注一下备注一下备注一下</p>
+					</section>
+					<section class="6u remark">
+						<blockquote>规范描述规范描述规范描述规范描述规范描述规范描述规范描述规范描述规范描述</blockquote>
+					</section>
+				</div>
+				<a href="#" class="button forExample special small icon fa-angle-double-down">举例</a>
+				<div class="row double defaultHidden">
+					<section class="6u">
+						<pre>
+							<code class="warning">
+										//不推荐写法
+		i = 0;
+		
+		while (!deck.isInOrder()) {
+		    print 'Iteration ' + i;
+		    deck.shuffle();
+		    i++;
+		}
+		print 'It took ' + i + ' iterations to sort the deck.';
+		
+							</code>
+						</pre>
+					</section>
+					<section class="6u">
+						<pre>
+								<code class="recommend">
+//推荐写法
+i = 0;
+while (!deck.isInOrder()) {
+    print 'Iteration ' + i;
+    deck.shuffle();
+    i++;
+}
+print 'It took ' + i + ' iterations to sort the deck.';
+
+							</code>
+						</pre>
+					</section>
+				</div>
+			</div>
+	</div>
+
+
+<div id="htmlcss" class="container">
+				<hr class="major" />
+				<h2>HTML/CSS：二级标题</h2>
+</div>
+
+<div class="container" id="js">
+				<hr class="major"/>
+				<h2>JAVASCRIPT：二级标题</h2>
+</div>
+
+		</div>
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="container">
+				<div class="row double">
+					<div class="6u">
+						<h2>Aliquam Interdum</h2>
+						<p>Ornare interdum nascetur enim lobortis nunc amet placerat pellentesque nascetur in adipiscing. Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan. Justo aliquet massa adipiscing cubilia eu
+							accumsan id. Arcu accumsan faucibus vis ultricies adipiscing ornare ut. Mi accumsan. Justo aliquet massa adipiscing cubilia eu accumsan id lorem ipsum dolor.</p>
+					</div>
+					<div class="6u">
+						<div class="row collapse-at-2">
+							<div class="6u">
+								<h3>优秀前端资源</h3>
+								<ul class="alt">
+									<li><a href="http://www.imooc.com/" target="_blank">慕课网</a>
+									</li>
+									<li><a href="http://www.imooc.com/" target="_blank">慕课网</a>
+									</li>
+									<li><a href="http://www.imooc.com/" target="_blank">慕课网</a>
+									</li>
+									<li><a href="http://www.imooc.com/" target="_blank">慕课网</a>
+									</li>
+								</ul>
+							</div>
+							<div class="6u">
+								<h3>前端大牛</h3>
+								<ul class="alt">
+									<li>Nascetur nunc varius commodo.</li>
+									<li>Vis id faucibus montes tempor</li>
+									<li>massa amet lobortis vel.</li>
+									<li>Nascetur nunc varius commodo.</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="copyright">
+				Created by<a href="http://zerosoul.github.io/impress-resume/" target="_blank">Tristan</a>. Powered by<a href="http://getskel.com/" target="_blank">Skel.js</a>
+			</div>
+		</footer>
+
+	</body>
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<title>前端编码规范</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="前端编码规范" />
+		<meta name="keywords" content="前端编码规范" />
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/jquery.parse.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+		</noscript>
+	</head>
+
+	<body id="top" class="addRule">
+		<!-- Header -->
+		<header id="header" class="skel-layers-fixed">
+			<h1><a href="#">F2E Code Style Guide</a></h1>
+			<nav id="nav">
+				<ul>
+					<li><a class="button small icon fa-home" href="index.html">返回主页</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<!-- Main -->
+		<div id="main" class="container">
+			<h3>增加编码规范</h3>
+			<hr />
+			<div class="row uniform">
+				<div class="2u">
+					<div class="select-wrapper">
+						<select id="category">
+							<option value="">- 选择类别 -</option>
+						</select>
+					</div>
+				</div>
+				<div class=".5u">
+					<a href="#" id="addCategoryToggle" class="icon fa-plus-circle" style="font-size: 30px;line-height: 35px;"></a>
+				</div>
+
+				<div class="2u addCate" style="display: none;">
+					<input type="text" id="cateTitle" placeholder="类别标题" />
+
+				</div>
+				<div class="2u addCate" style="display: none;">
+					<input type="text" id="cateName" placeholder="增加锚点[英文]" />
+				</div>
+				<div class="2u addCate" style="display: none;">
+					<input type="text" id="cateiconClass" placeholder="图标" />
+
+				</div>
+				<div class="1u addCate" style="display: none;">
+					<a href="http://fontawesome.io/icons/" target="_blank">图标列表</a>
+				</div>
+				<div class="2u addCate" style="display: none;">
+					<a id="addCategory" href="#" class="button special small">确定</a>
+				</div>
+			</div>
+			<div class="row uniform collapse-at-2">
+				<div class="6u">
+					<input type="text" class="canReset" id="title" placeholder="标题">
+				</div>
+
+			</div>
+
+
+			<div class="row uniform">
+				<div class="12u">
+					<textarea id="description" class="canReset" placeholder="描述...[可使用HTML标签]" rows="6"></textarea>
+				</div>
+			</div>
+			<div class="row uniform">
+				<div class="12u">
+					<textarea id="remark" class="canReset" placeholder="备注...[可使用HTML标签]" rows="6"></textarea>
+				</div>
+			</div>
+			<div class="row uniform">
+				<div class="6u">
+					<textarea class="warning canReset" id="example-unrecom" placeholder="不推荐写法..." rows="6"></textarea>
+				</div>
+				<div class="6u">
+					<textarea class="recommend canReset" id="example-recom" placeholder="推荐写法..." rows="6"></textarea>
+				</div>
+
+			</div>
+			<div class="row uniform">
+				<div class="2u">
+					<ul class="actions 12u">
+						<li>
+							<a class="button special" id="commit" href="#">确定</a>
+						</li>
+						<li>
+							<a class="button" id="reset" href="#">重置</a>
+						</li>
+					</ul>
+				</div>
+				<div class="1u" id="sendResultTip">
+					<div class="addResultTip added">添加成功</div>
+					<div class="addResultTip failed">添加失败</div>
+				</div>
+			</div>
+		</div>
+		<!-- Footer -->
+		<footer id="footer">
+			<div class="copyright">
+				Created by<a href="http://zerosoul.github.io/impress-resume/" target="_blank">Tristan</a>. Powered by<a href="http://getskel.com/" target="_blank">Skel.js</a>
+			</div>
+		</footer>
+
+	</body>
+
+</html>
