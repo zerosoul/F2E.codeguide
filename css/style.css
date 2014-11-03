@@ -1023,6 +1023,11 @@ section.remark{
 .tip{
 	color: #49BF9D;
 }
+.loading{
+	text-align: center;
+	font-size: 2.5em;
+	color: #5CC6A7;
+}
 /*.forExample{
 	margin-bottom: 1.5em;
 }*/

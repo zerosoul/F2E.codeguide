@@ -298,9 +298,12 @@
 						break;
 					}
 				});
-				$("#common").append(commonArray);
-				$("#htmlcss").append(htmlcssArray);
-				$("#js").append(jsArray);
+				$("#common").find(".loading").remove()
+				.end().append(commonArray);
+				$("#htmlcss").find(".loading").remove()
+				.end().append(htmlcssArray);
+				$("#js").find(".loading").remove()
+				.end().append(jsArray);
 				//bind event
 				bindToggleAll();
 				bindToggleExample();
