@@ -170,14 +170,15 @@
 			});
 
 			function postRuleInputs() {
-				var type = Number($("#category").find("option:selected").val()),
+				var cate = Number($("#category").find("option:selected").val()),
 					title = $("#title").val(),
 					des = $("#description").val(),
 					remark = $("#remark").val(),
 					unrecom = $("#example-unrecom").val(),
 					recom = $("#example-recom").val();
 				var ruleItem = {
-					type: type,
+					cate: cate,
+					type:1,
 					title: title,
 					description: des,
 					remark: remark,
