@@ -108,6 +108,10 @@
 
 		// add rule page
 		if ($("body").hasClass("addRule")) {
+			//toggle more info
+			$(".moreInfo i").hover(function(){
+				$(this).next(".popupInfo").toggle();
+			});
 			//load cates
 			var optionItem = $("<option/>");
 			$.parse.get("category", function(json) {
