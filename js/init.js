@@ -270,7 +270,8 @@
 
 				var commonArray = [],
 					htmlcssArray=[],
-					jsArray=[];
+					jsArray=[]
+					jqueryArray=[];
 				$.each(json.results, function(idx, obj) {
 					var tmpItem = ruleItem.clone(),hit=0;
 					tmpItem.attr("data-objId",obj.objectId).find(".title").text(obj.title)
@@ -300,6 +301,10 @@
 						//js
 						jsArray.push(tmpItem);
 						break;
+						//jquery
+						case 4:
+						jqueryArray.push(tmpItem);
+						break;
 					}
 				});
 				$("#common").find(".loading").remove()
@@ -308,6 +313,8 @@
 				.end().append(htmlcssArray);
 				$("#js").find(".loading").remove()
 				.end().append(jsArray);
+				$("#jquery").find(".loading").remove()
+				.end().append(jqueryArray);
 				//bind event
 				bindToggleAll();
 				bindToggleExample();
